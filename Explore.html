@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Alaska - Explore</title>
+
+    <link href="css/site.css" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Noto+Serif&display=swap"
+          rel="stylesheet">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.addEventListener("load", (event) => {
+            let email = document.getElementById("email-input")
+            let confirmationEmail = document.getElementById("email-confirmation-input")
+            let confirmEmailLabel = document.getElementById("confirm-email-label")
+            let emailErrorMessage = document.getElementById("email-error")
+
+            confirmationEmail.addEventListener('change', (event) => {
+                if (email.value !== confirmationEmail.value) {
+                    emailErrorMessage.style.display = 'inline-block';
+                    confirmEmailLabel.style.color = '#ab4747'
+                    event.preventDefault();
+                } else {
+                    emailErrorMessage.style.display = 'none';
+                    confirmEmailLabel.style.color = '#095963';
+                }
+            })
+
+            email.addEventListener('change', (event) => {
+                if (email.value !== confirmationEmail.value) {
+                    emailErrorMessage.style.display = 'inline-block';
+                    confirmEmailLabel.style.color = '#ab4747'
+                    event.preventDefault();
+                } else {
+                    emailErrorMessage.style.display = 'none';
+                    confirmEmailLabel.style.color = '#095963';
+                }
+            })
+        });
+    </script>
+</head>
+
+<body id="explore">
+<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <div class="container-md">
+        <button aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#collapsibleNavbar" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="./Index.html">
+            <img alt="Logo" class="logo" src="./images/logo.png">
+        </a>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <a class="navbar-brand title" href="./Index.html">
+                Alaska
+            </a>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link" href="./Index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">
+                        Cities
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./Cities/Anchorage.html">Anchorage</a></li>
+                        <li><a class="dropdown-item" href="./Cities/Juneau.html">Juneau</a></li>
+                        <li><a class="dropdown-item" href="./Cities/Ketchikan.html">Ketchikan</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="./Cities/Comparison.html">Compare</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="./Explore.html">More Info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container-md">
+    <div class="row">
+        <header>
+            <h1 class="title">
+                Explore Alaska Now
+            </h1>
+        </header>
+    </div>
+
+
+    <section>
+        <form>
+            <div class="row">
+                <div class="mb-3 col-md" id="first-name">
+                    <label class="form-label" for="first-name-input">First Name</label>
+                    <input class="form-control" id="first-name-input" name="first-name"
+                           placeholder="Enter first name"
+                           type="text"/>
+                </div>
+
+                <div class="mb-3 col-md" id="last-name">
+                    <label class="form-label" for="last-name-input">Last Name</label>
+                    <input class="form-control" id="last-name-input" name="last-name"
+                           placeholder="Enter last name"
+                           type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md" id="email">
+                    <label class="form-label" for="email-input">Email Address</label>
+                    <input class="form-control" id="email-input" name="email-address" placeholder="Enter email"
+                           type="text"/>
+                </div>
+
+                <div class="mb-3 col-md" id="email-confirmation">
+                    <label class="form-label" for="email-confirmation-input" id="confirm-email-label">Confirm
+                        Email Address</label>
+                    <input class="form-control" id="email-confirmation-input" name="email-confirmation"
+                           placeholder="Enter email again" type="text"/>
+                    <div class="form-text" id="email-error">Email addresses must match.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md" id="questions">
+                    <label class="form-label" for="questions-input">Questions</label>
+                    <textarea class="form-control" id="questions-input" name="questions"
+                              placeholder="Enter any questions you have" type="textarea"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="Submit"/>
+
+        </form>
+    </section>
+
+    <div class="row">
+        <aside>
+            This form doesn't actually submit anything.
+        </aside>
+    </div>
+
+</main>
+
+</body>
+
+
+</html>

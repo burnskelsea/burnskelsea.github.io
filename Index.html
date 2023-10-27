@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Alaska - Home</title>
+
+    <link rel="stylesheet" href="css/site.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Noto+Serif&display=swap"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <div class="container-md">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+                aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="./Index.html">
+            <img src="./images/logo.png" class="logo" alt="Logo">
+        </a>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <a class="navbar-brand title" href="./Index.html">
+                Alaska
+            </a>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./Index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cities
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./Cities/Anchorage.html">Anchorage</a></li>
+                        <li><a class="dropdown-item" href="./Cities/Juneau.html">Juneau</a></li>
+                        <li><a class="dropdown-item" href="./Cities/Ketchikan.html">Ketchikan</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="./Cities/Comparison.html">Compare</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./Explore.html">More Info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div>
+    <img src="images/homeBanner.png" alt="Alaskan night sky featuring the Northern Lights" id="background-image"/>
+</div>
+
+<main class="container-md">
+    <div class="row">
+        <div class="overlay col-lg-5">
+            <div class="overlay-content">
+
+                <header>
+                    <div class="logo-container">
+                        <img src="./images/logo.png" class="logo" alt="Logo">
+                    </div>
+                    <h1 class="title">Alaska</h1>
+                    <h3 class="subtitle">North to the Future</h3>
+                </header>
+
+                <section>
+                    <ol id="description-list">
+                        <li>Book your hotel.</li>
+                        <li>Pack your bags.</li>
+                        <li>Enjoy the Last Frontier.</li>
+                    </ol>
+                </section>
+
+                <aside>
+                    Photo courtesy of Noel_Bauza from pixabay.
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
